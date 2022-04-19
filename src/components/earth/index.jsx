@@ -21,14 +21,14 @@ export function Earth(props) {
   useFrame(({ clock }) => {
     const elapsedTime = clock.getElapsedTime();
 
-    earthRef.current.rotation.y = elapsedTime / 6;
-    cloudsRef.current.rotation.y = elapsedTime / 6;
+    earthRef.current.rotation.y = elapsedTime / 12;
+    cloudsRef.current.rotation.y = elapsedTime / 10;
   });
 
   return (
     <>
       {/* <ambientLight intensity={1} /> */}
-      <pointLight color="#f6f3ea" position={[2, 0, 5]} intensity={1.2} />
+      <pointLight color="#f6f3ea" position={[1, 0, 5]} intensity={1.2} />
       <Stars
         radius={300}
         depth={60}
